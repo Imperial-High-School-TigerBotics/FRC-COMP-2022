@@ -106,22 +106,22 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
     JoystickButton middleLiftX = new JoystickButton(controller, XboxController.Button.kX.value);  //DOWN
-    middleLiftX.whileHeld(liftMiddleCmd);   
+    middleLiftX.onTrue(liftMiddleCmd);   
 
     JoystickButton middleLiftB = new JoystickButton(controller, XboxController.Button.kB.value);  //UP
-    middleLiftB.whileHeld(liftMiddleCmd);
+    middleLiftB.onTrue(liftMiddleCmd);
 
     JoystickButton liftIntakeY = new JoystickButton(controller, XboxController.Button.kY.value);
-    liftIntakeY.whileHeld(liftIntakeCmd);
+    liftIntakeY.onTrue(liftIntakeCmd);
 
     JoystickButton LiftIntakeA = new JoystickButton(controller, XboxController.Button.kA.value);
-    LiftIntakeA.whileHeld(liftIntakeCmd);
+    LiftIntakeA.onTrue(liftIntakeCmd);
 
     JoystickButton rightBumperRB = new JoystickButton(controller, XboxController.Button.kRightBumper.value);
-    rightBumperRB.whileHeld(reverseIntakeCmd);
+    rightBumperRB.onTrue(reverseIntakeCmd);
 
     JoystickButton leftBumperLB = new JoystickButton(controller, XboxController.Button.kLeftBumper.value);
-    leftBumperLB.whileHeld(reverseBlift);
+    leftBumperLB.onTrue(reverseBlift);
 
     
   }  
